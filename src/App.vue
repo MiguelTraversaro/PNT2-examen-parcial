@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container-fluid mt-3">
+    <div class="jumbotron">
+      <h1>Examen Parcial</h1>
+      <br>
+      <Navbar />
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from "./componentes/Navbar.vue"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .jumbotron {
+    padding: 32px;
+  }
+  
+  hr{
+  background-color: white;
+  }
 </style>
